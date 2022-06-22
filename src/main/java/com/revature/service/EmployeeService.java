@@ -41,4 +41,10 @@ public class EmployeeService {
 		
 		return edao.findAll();
 	}
+	
+	// this service method returns the PK
+	public int register(Employee e) {
+		// the dao method returns the PK
+		return edao.insert(e);
+	}
 }
