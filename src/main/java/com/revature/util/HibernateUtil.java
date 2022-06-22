@@ -14,7 +14,6 @@ public class HibernateUtil {
 	private static Session ses; // this is kind of like the Connection Interface from the JDBC API
 	private static SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	
-	
 	/**
 	 * We will use SessionFactory Interface to create a configuration object which 
 	 * will call the .configure method to establish the connection to the DB based 
@@ -41,7 +40,4 @@ public class HibernateUtil {
 		ses.close();
 		
 	}
-	
-	
-
 }
