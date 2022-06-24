@@ -28,8 +28,11 @@ public class RequestHelper {
 	 */
 	public static void processEmployees(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		// will return an entire list of Employees
+		
 		// 1. set the content type to be application/json
 		response.setContentType("application/json");
+		response.addHeader("Access-Control-Allow-Origin", "*");
 		
 		// 2. Call the getAll() method from the employee service
 		List<Employee> emps = eserv.getAll();
