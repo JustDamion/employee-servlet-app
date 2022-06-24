@@ -76,7 +76,7 @@ function fetchEmps() {
     let hostname = window.location.hostname;
 
     // this is a template literal (introduced in ES6)
-    fetch('http://${hostname}:8080/employee-servlet-app/employees')
+    fetch('http://${hostname}/employee-servlet-app/employees')
     //.then(response => response.json()) // takes a json string and transforms it to a javascript object
     //.then(obj => console.log(obj)); // print the JS obj to the consol
     .then(buildTable); // this automatically passes the data that's been parsed
